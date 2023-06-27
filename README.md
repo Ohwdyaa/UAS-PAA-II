@@ -45,3 +45,50 @@ Average case:
 Average case pada Bubble dan Insertion Sort terjadi ketika elemen-elemen dalam array memiliki urutan yang acak. Pada contoh ini, array awal memiliki elemen-elemen yang acak, sehingga hasil run dapat dianggap sebagai representasi dari average case.
 
 Dengan demikian, berdasarkan hasil run program, kasus ini termasuk dalam average case untuk Bubble dan Insertion Sort.
+
+
+# Hasil Run program pengurutan
+Pilihan penghitungan shortest path:
+1. TSP (Traveling Salesman Problem) - Prim's Algorithm
+2. Dijkstra
+Masukkan pilihan (1/2): 1
+--- TSP (Traveling Salesman Problem) - Prim's Algorithm ---
+Shortest path: ['A', 'B', 'G', 'E', 'C', 'F', 'H', 'D', 'A']
+![image](https://github.com/Ohwdyaa/UAS-PAA-II/assets/107343788/e24b2239-51cf-4a09-a44a-c1616a3b1e56)
+
+--- Dijkstra ---
+Masukkan titik awal: A
+Shortest path from A to A : ['A']
+Shortest path from A to B : ['A', 'B']
+Shortest path from A to G : ['A', 'G']
+Shortest path from A to C : ['A', 'G', 'C']
+Shortest path from A to D : ['A', 'B', 'D']
+Shortest path from A to E : ['A', 'G', 'E']
+Shortest path from A to F : ['A', 'G', 'F']
+Shortest path from A to H : ['A', 'G', 'H']
+
+# Analisis TSP&Dijkstra
+# 1. TSP (Traveling Salesman Problem)
+   Berdasarkan hasil run menggunakan algoritma TSP dengan Prim's Algorithm yang diberikan, yaitu jalur terpendek ['A', 'B', 'G', 'E', 'C', 'F', 'H', 'D', 'A'], kita dapat melakukan analisis algoritma sebagai berikut:
+
+a. Worst case: Algoritma Prim's memiliki kompleksitas waktu O(|V|^2), di mana |V| adalah jumlah simpul (kota) dalam grafik. Dalam kasus ini, terdapat 8 simpul (A, B, C, D, E, F, G, H), sehingga kompleksitas waktu algoritma Prim's adalah O(8^2) = O(64), yang dapat dianggap sebagai kompleksitas waktu tetap. Oleh karena itu, tidak ada perbedaan signifikan dalam kinerja algoritma antara kasus terbaik dan kasus terburuk.
+
+b. Best case: Karena algoritma Prim's memiliki kompleksitas waktu tetap, tidak ada perbedaan dalam kinerja algoritma antara kasus terbaik dan kasus terburuk. Dalam hal ini, hasil run yang diberikan ['A', 'B', 'G', 'E', 'C', 'F', 'H', 'D', 'A'] adalah jalur terpendek yang ditemukan oleh algoritma Prim's.
+
+c. Average case: Algoritma Prim's memiliki kompleksitas waktu tetap, sehingga tidak ada perbedaan kinerja antara kasus terbaik, terburuk, dan rata-rata. Oleh karena itu, hasil run yang diberikan ['A', 'B', 'G', 'E', 'C', 'F', 'H', 'D', 'A'] adalah hasil rata-rata yang ditemukan oleh algoritma Prim's.
+
+Dalam kasus ini, algoritma Prim's memberikan solusi jalur terpendek yang sama setiap saat karena grafiknya relatif kecil dan tidak memiliki perubahan yang signifikan dalam kompleksitas waktu. Namun, penting untuk dicatat bahwa hasil analisis ini hanya berlaku dalam konteks grafik yang diberikan. Untuk masalah TSP dengan grafik yang lebih besar atau berbeda, kompleksitas dan performa algoritma dapat berbeda.
+
+# 2. Dijkstra
+   Berikut adalah analisis algoritma berdasarkan hasil run program:
+
+a. Worst case:
+Worst case untuk algoritma Dijkstra terjadi ketika semua titik dalam grafik saling terhubung dengan bobot yang besar. Dalam kasus ini, program akan melakukan pencarian jalur terpendek dari titik awal ke semua titik lainnya. Dalam contoh ini, tidak ada jalur yang membutuhkan langkah yang lebih dari memeriksa semua titik. Oleh karena itu, tidak ada kasus terburuk yang signifikan dalam contoh ini.
+
+b. Best case:
+Best case untuk algoritma Dijkstra terjadi ketika ada jalur terpendek langsung dari titik awal ke titik tujuan. Dalam contoh ini, jika titik tujuan hanya satu langkah dari titik awal, program akan langsung menemukan jalur terpendek tanpa perlu memeriksa titik lainnya. Misalnya, jalur terpendek dari A ke B adalah ['A', 'B'].
+
+c. Average case:
+Rata-rata kasus untuk algoritma Dijkstra terjadi ketika terdapat beberapa titik tujuan yang berbeda dengan jarak yang bervariasi dari titik awal. Dalam contoh ini, program mencari jalur terpendek dari titik awal ke semua titik lainnya. Oleh karena itu, rata-rata kasus dalam contoh ini adalah mencari jalur terpendek dari titik awal ke setiap titik lainnya.
+
+Dalam keseluruhan, program menggunakan algoritma Dijkstra yang efisien untuk mencari jalur terpendek dari titik awal ke semua titik lainnya dalam grafik yang diberikan.
